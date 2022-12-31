@@ -13,14 +13,14 @@
 #define SYM 2
 #define FUN 3
 
-//cond_layers {
-//	compatible = "zmk,conditional-layers";
-//	// Define FUN layer as tri-state
-//	func_tristate {
-//		if-layers = <NUM SYM>;
-//		then-layer = <FUN>;
-//	};
-//};
+cond_layers {
+	compatible = "zmk,conditional-layers";
+	// Define FUN layer as tri-state
+	func_tristate {
+		if-layers = <NUM SYM>;
+		then-layer = <FUN>;
+	};
+};
 
 / {
 	keymap {
@@ -29,10 +29,10 @@
 		default_layer {
 			label = "DEF";
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |  ~ `  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   \  |
-// |  ctrl |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
-// |  caps |  Z  |  X  |  C   |  V   |  B   | esc     | del     |  |         |         |  N   |  M    |  ,    |  .   |   /   |      |
-//                     | GUI  | ALT  | RET  |  SPACE/NUM | shift   |  |  shift  |  SPACE/SYM | TAB  | BSPC  | R-ALT |
+// |  ~ `  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   		|  U    |  I    |  O   	|   P   |   \  |
+// |  ctrl |  A  |  S  |  D   |  F   |  G   |                                          |  H   		|  J    |  K    |  L   	|   ;   |   '  |
+// |  caps |  Z  |  X  |  C   |  V   |  B   | esc     	 | del     |         |         |  N   		|  M    |  ,    |  .   	|   /   |      |
+//                     | GUI  | ALT  | RET  |  SPACE/NUM | shift   | 		 |  shift  |  SPACE/SYM | TAB  | BSPC  	| R-ALT |
 
 			bindings = <
 	&kp GRAVE   &kp Q &kp W &kp E 		&kp R 		&kp T                                                				&kp Y 	&kp U  		&kp I     &kp O   &kp P    &kp BSLH
