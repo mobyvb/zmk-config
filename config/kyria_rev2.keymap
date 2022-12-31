@@ -13,16 +13,17 @@
 #define SYM 2
 #define FUN 3
 
-cond_layers {
-	compatible = "zmk,conditional-layers";
-	// Define FUN layer as tri-state
-	func_tristate {
-		if-layers = <NUM SYM>;
-		then-layer = <FUN>;
-	};
-};
-
 / {
+
+	cond_layers {
+		compatible = "zmk,conditional-layers";
+		// Define FUN layer as tri-state
+		func_tristate {
+			if-layers = <NUM SYM>;
+			then-layer = <FUN>;
+		};
+	};
+
 	keymap {
 		compatible = "zmk,keymap";
 
